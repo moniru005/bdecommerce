@@ -37,18 +37,24 @@ const Navbar = () => {
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
-        <li>
+
+        {/* <li>
           <NavLink to="/electronics">Electronics</NavLink>
-        </li>
-        <li>
+        </li> */}
+
+        {/* <li>
           <NavLink to="/fashion">Fashion</NavLink>
+        </li> */}
+
+        <li>
+          <NavLink to="/shop">Shop</NavLink>
         </li>
         <li>
           <NavLink to="/contact">Contact</NavLink>
         </li>
         {user && (
           <li>
-            <NavLink to="/dashboard">Dashboard</NavLink>
+            <NavLink to="/dashboard/addProduct">Dashboard</NavLink>
           </li>
         )}
       </div>
@@ -105,7 +111,7 @@ const Navbar = () => {
           {user ? (
             <>
               <div className="flex flex-row gap-2 items-center">
-                <span>{user.displayName}</span>
+                <span className={`lg:flex hidden`}>{user.displayName}</span>
                 <span className="hidden lg:flex">{logOutButton}</span>
               </div>
             </>
@@ -116,7 +122,7 @@ const Navbar = () => {
         </div>
         <div className="border-r-[1.5px] h-6 border-r-[#1E1E1E]"></div>
         <div>
-          <HiOutlineMenuAlt3 className="text-xl" />
+          <HiOutlineMenuAlt3 className="text-xl lg:flex hidden" />
         </div>
       </div>
 

@@ -1,0 +1,16 @@
+.sidebar a {
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.sidebar a.active {
+  background-color: #75b5a0;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.sidebar a button {
+  text-align: left;
+}
